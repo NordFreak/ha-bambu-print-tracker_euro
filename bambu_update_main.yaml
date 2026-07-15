@@ -208,7 +208,7 @@ blueprint:
       collapsed: true
       input:
         filament_cost_per_kg:
-          name: Filament Cost per KG (£)
+          name: Filament Cost per KG (€)
           description: Enter the cost of your filament per kilogram (e.g., 18.99). Set to 0 to disable filament cost tracking.
           default: 20.00
           selector:
@@ -231,8 +231,8 @@ blueprint:
           selector:
             boolean: {}
         static_electricity_price:
-          name: Static Electricity Unit Cost (£/kWh)
-          description: Enter your fixed electricity rate here. (e.g., 0.28 for 28p per kWh).
+          name: Static Electricity Unit Cost (€/kWh)
+          description: Enter your fixed electricity rate here. (e.g., 0.28 for 28c per kWh).
           default: 0.25
           selector:
             number:
@@ -587,9 +587,9 @@ action:
                       
                       {% if fil_cost > 0 or (enable_energy_tracking_var and start_kwh_helper_var != '') %}
                       💰 Cost Breakdown
-                      {% if fil_cost > 0 %}Filament: £{{ "%.2f" | format(fil_cost) }}{% endif %}
-                      {% if enable_energy_tracking_var and start_kwh_helper_var != '' %}Energy: £{{ "%.2f" | format(energy_cost) }}{% endif %}
-                      Total Cost: £{{ "%.2f" | format(fil_cost + energy_cost) }}
+                      {% if fil_cost > 0 %}Filament: €{{ "%.2f" | format(fil_cost) }}{% endif %}
+                      {% if enable_energy_tracking_var and start_kwh_helper_var != '' %}Energy: €{{ "%.2f" | format(energy_cost) }}{% endif %}
+                      Total Cost: €{{ "%.2f" | format(fil_cost + energy_cost) }}
                       {% endif %}
                     data:
                       color: "{{ 'green' if trigger.id == 'Print Complete' else 'red' }}"
