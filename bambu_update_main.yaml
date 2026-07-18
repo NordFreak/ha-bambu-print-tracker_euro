@@ -510,7 +510,7 @@ action:
                           + ([{"action": "BAMBU_CUSTOM_" ~ printer_status_var, "title": button_3_custom_title_var}] if button_3_mode_var == 'Custom Action' else [])
                         }}
 
-      # --- PRINT COMPLETE OR FAILED ---
+# --- PRINT COMPLETE OR FAILED ---
       - conditions:
           - condition: trigger
             id:
