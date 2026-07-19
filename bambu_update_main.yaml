@@ -609,7 +609,7 @@ action:
                         {{
                           [
                             {"action": "URI", "title": action_1_title_var, "uri": action_1_uri_var},
-                            {"action": "URI", "title": action_2_camera_title_var if printer_camera_var else action_2_fallback_title_var, "uri": ("entityId:" ~ printer_camera_var) if printer_camera_var else action_2_fallback_uri_var}
+#                            {"action": "URI", "title": action_2_camera_title_var if printer_camera_var else action_2_fallback_title_var, "uri": ("entityId:" ~ printer_camera_var) if printer_camera_var else action_2_fallback_uri_var}
                           ]
                           + ([{"action": "BAMBU_CUSTOM_" ~ printer_status_var, "title": button_3_custom_title_var}] if button_3_mode_var == 'Custom Action' else [])
                         }}
